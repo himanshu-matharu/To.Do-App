@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A345E8F428A6DA310059B771 /* Todo Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345E8F328A6DA310059B771 /* Todo Model.swift */; };
+		A345E8F828A6F4690059B771 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345E8F628A6F4690059B771 /* TodoCell.swift */; };
+		A345E8F928A6F4690059B771 /* TodoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A345E8F728A6F4690059B771 /* TodoCell.xib */; };
 		A35A001228A4FAF5005799E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A001128A4FAF5005799E9 /* AppDelegate.swift */; };
 		A35A001428A4FAF5005799E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A001328A4FAF5005799E9 /* SceneDelegate.swift */; };
 		A35A001628A4FAF5005799E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A001528A4FAF5005799E9 /* HomeViewController.swift */; };
 		A35A001928A4FAF5005799E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A001728A4FAF5005799E9 /* Main.storyboard */; };
 		A35A001B28A4FAF6005799E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A35A001A28A4FAF6005799E9 /* Assets.xcassets */; };
 		A35A001E28A4FAF6005799E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A001C28A4FAF6005799E9 /* LaunchScreen.storyboard */; };
+		A3644D0D28A708D70011BB63 /* TodoDoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3644D0B28A708D70011BB63 /* TodoDoneCell.swift */; };
+		A3644D0E28A708D70011BB63 /* TodoDoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3644D0C28A708D70011BB63 /* TodoDoneCell.xib */; };
+		A3644D1028A70B4D0011BB63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3644D0F28A70B4D0011BB63 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A345E8F328A6DA310059B771 /* Todo Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todo Model.swift"; sourceTree = "<group>"; };
+		A345E8F628A6F4690059B771 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
+		A345E8F728A6F4690059B771 /* TodoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoCell.xib; sourceTree = "<group>"; };
 		A35A000E28A4FAF5005799E9 /* To.Do.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = To.Do.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35A001128A4FAF5005799E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A35A001328A4FAF5005799E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		A35A001A28A4FAF6005799E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35A001D28A4FAF6005799E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A35A001F28A4FAF6005799E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3644D0B28A708D70011BB63 /* TodoDoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDoneCell.swift; sourceTree = "<group>"; };
+		A3644D0C28A708D70011BB63 /* TodoDoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoDoneCell.xib; sourceTree = "<group>"; };
+		A3644D0F28A70B4D0011BB63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A345E8F528A6DA350059B771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A345E8F328A6DA310059B771 /* Todo Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A345E8FA28A6F4A00059B771 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A345E8F628A6F4690059B771 /* TodoCell.swift */,
+				A345E8F728A6F4690059B771 /* TodoCell.xib */,
+				A3644D0B28A708D70011BB63 /* TodoDoneCell.swift */,
+				A3644D0C28A708D70011BB63 /* TodoDoneCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A35A000528A4FAF5005799E9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +89,12 @@
 			children = (
 				A35A001128A4FAF5005799E9 /* AppDelegate.swift */,
 				A35A001328A4FAF5005799E9 /* SceneDelegate.swift */,
+				A345E8F528A6DA350059B771 /* Model */,
+				A345E8FA28A6F4A00059B771 /* Views */,
 				A35A002728A4FB72005799E9 /* Controllers */,
 				A35A002528A4FB39005799E9 /* Resources */,
 				A35A002628A4FB41005799E9 /* Supporting Files */,
+				A3644D0F28A70B4D0011BB63 /* Constants.swift */,
 			);
 			path = To.Do;
 			sourceTree = "<group>";
@@ -152,6 +186,8 @@
 				A35A001E28A4FAF6005799E9 /* LaunchScreen.storyboard in Resources */,
 				A35A001B28A4FAF6005799E9 /* Assets.xcassets in Resources */,
 				A35A001928A4FAF5005799E9 /* Main.storyboard in Resources */,
+				A345E8F928A6F4690059B771 /* TodoCell.xib in Resources */,
+				A3644D0E28A708D70011BB63 /* TodoDoneCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +200,11 @@
 			files = (
 				A35A001628A4FAF5005799E9 /* HomeViewController.swift in Sources */,
 				A35A001228A4FAF5005799E9 /* AppDelegate.swift in Sources */,
+				A345E8F428A6DA310059B771 /* Todo Model.swift in Sources */,
+				A345E8F828A6F4690059B771 /* TodoCell.swift in Sources */,
+				A3644D1028A70B4D0011BB63 /* Constants.swift in Sources */,
 				A35A001428A4FAF5005799E9 /* SceneDelegate.swift in Sources */,
+				A3644D0D28A708D70011BB63 /* TodoDoneCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
