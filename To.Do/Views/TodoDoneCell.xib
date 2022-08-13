@@ -19,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tb-YS-Dq9">
-                        <rect key="frame" x="20" y="7.5" width="314" height="62"/>
+                        <rect key="frame" x="0.0" y="7.5" width="354" height="62"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EAS-ep-NOQ">
-                                <rect key="frame" x="10" y="0.0" width="294" height="62"/>
+                                <rect key="frame" x="10" y="0.0" width="334" height="62"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USQ-Ke-UUd">
                                         <rect key="frame" x="0.0" y="10" width="42" height="42"/>
@@ -46,7 +46,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy fruits" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZ5-9X-VlT">
-                                        <rect key="frame" x="57" y="21.5" width="237" height="19.5"/>
+                                        <rect key="frame" x="57" y="21.5" width="277" height="19.5"/>
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" name="PrimaryGrayColor"/>
@@ -66,9 +66,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="9tb-YS-Dq9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7.5" id="6GJ-2N-R8p"/>
-                    <constraint firstAttribute="trailing" secondItem="9tb-YS-Dq9" secondAttribute="trailing" constant="20" id="7Xc-P0-sVV"/>
+                    <constraint firstAttribute="trailing" secondItem="9tb-YS-Dq9" secondAttribute="trailing" id="7Xc-P0-sVV"/>
                     <constraint firstAttribute="bottom" secondItem="9tb-YS-Dq9" secondAttribute="bottom" constant="7.5" id="PIj-8u-098"/>
-                    <constraint firstItem="9tb-YS-Dq9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="yJk-fw-pEd"/>
+                    <constraint firstItem="9tb-YS-Dq9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yJk-fw-pEd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

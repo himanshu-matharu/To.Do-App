@@ -242,8 +242,8 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I9n-cy-EUX">
-                                <rect key="frame" x="0.0" y="221.5" width="290.5" height="570.5"/>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="I9n-cy-EUX">
+                                <rect key="frame" x="20" y="221.5" width="250.5" height="570.5"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
                             </tableView>
@@ -279,8 +279,8 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KtJ-Aa-855" firstAttribute="top" secondItem="4KN-yu-gyx" secondAttribute="bottom" constant="16" id="1np-La-VAG"/>
-                            <constraint firstItem="I9n-cy-EUX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6AN-p5-ynH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I9n-cy-EUX" secondAttribute="trailing" id="LPM-fw-Eyp"/>
+                            <constraint firstItem="I9n-cy-EUX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6AN-p5-ynH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I9n-cy-EUX" secondAttribute="trailing" constant="20" id="LPM-fw-Eyp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gCE-CW-bVo" secondAttribute="bottom" constant="15" id="Qyh-cZ-q4t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KtJ-Aa-855" secondAttribute="trailing" id="UG0-MC-Na4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4KN-yu-gyx" secondAttribute="trailing" id="ch5-Af-ws3"/>

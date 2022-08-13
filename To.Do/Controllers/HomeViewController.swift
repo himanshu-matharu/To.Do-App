@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var newTodoTrigger: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    let DUMMY_TODOS = [
+    var DUMMY_TODOS = [
         Todo(id: 0, text: "Meet Ann", isDone: false, highPriority: false, reminder: "8:00 PM"),
         Todo(id: 1, text: "Buy the book", isDone: false, highPriority: false, reminder: nil),
         Todo(id: 2, text: "Call mom", isDone: false, highPriority: false, reminder: nil),
@@ -99,6 +99,13 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: K.todoDoneCellNibName, bundle: nil), forCellReuseIdentifier: K.todoDoneCellIdentifier)
         tableView.sectionHeaderTopPadding = 0
     }
+    
+    private func deleteTodo(item:Todo){
+        let index = DUMMY_TODOS.firstIndex { todo in
+            todo.id == item.id
+        }
+        DUMMY_TODOS.remove(at: index!)
+    }
 
 }
 
@@ -131,6 +138,8 @@ extension HomeViewController: UITableViewDataSource{
                 cell?.reminderIndicator.isHidden = true
                 cell?.reminderText.isHidden = true
             }
+            cell?.clipsToBounds = false
+            cell?.contentView.clipsToBounds = false
             cell?.priorityIndicator.isHidden = !item.highPriority
             return cell ?? UITableViewCell()
         case .done(let items):
@@ -160,6 +169,30 @@ extension HomeViewController: UITableViewDelegate{
         }else{
             return nil
         }
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let trash = UIContextualAction(style: .destructive, title: "") { action, view, completionHandler in
+            completionHandler(true)
+            let section = self.tableDataSource[indexPath.section]
+            switch section {
+            case.todo(let items):
+                let item = items[indexPath.row]
+                self.deleteTodo(item: item)
+            case.done(let items):
+                let item = items[indexPath.row]
+                self.deleteTodo(item: item)
+            }
+            self.tableDataSource = self.createDataSource()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        trash.backgroundColor = UIColor(named: "BackgroundColor")
+        trash.image = UIImage(named: "Trash")
+        
+        let configuration = UISwipeActionsConfiguration(actions: [trash])
+        return configuration
     }
 }
 
