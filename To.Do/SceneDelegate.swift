@@ -17,6 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        saveDummyEntries()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -45,8 +47,58 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    //MARK: - Temp Utils
+    struct TempTodo{
+        let text: String
+        let isDone: Bool
+        let highPriority: Bool
+        let dueBy: Date
+        let doneOn: Date?
+    }
+    
+    var DUMMY_TODOS = [
+        // Not Done
+        // Today
+        TempTodo(text: "Meet Ann", isDone: false, highPriority: false, dueBy: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!, doneOn: nil),
+        TempTodo(text: "Meet James", isDone: false, highPriority: false, dueBy: Calendar.current.date(bySettingHour: 15, minute: 0, second: 0, of: Date())!, doneOn: nil),
+        TempTodo(text: "Meet Sherlock", isDone: false, highPriority: true, dueBy: Calendar.current.date(bySettingHour: 15, minute: 0, second: 0, of: Date())!, doneOn: nil),
+        // Future
+        TempTodo(text: "Make an appointment", isDone: false, highPriority: false, dueBy: Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!)!, doneOn: nil),
+        TempTodo(text: "Call Harry", isDone: false, highPriority: false, dueBy: Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.date(bySettingHour: 12, minute: 15, second: 0, of: Date())!)!, doneOn: nil),
+        TempTodo(text: "Call Peter", isDone: false, highPriority: true, dueBy: Calendar.current.date(byAdding: .day, value: 1, to: Calendar.current.date(bySettingHour: 12, minute: 15, second: 0, of: Date())!)!, doneOn: nil),
+        // Past
+        TempTodo(text: "Call mom", isDone: false, highPriority: false, dueBy: Calendar.current.date(byAdding: .day, value: -1, to: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!)!, doneOn: nil),
+        TempTodo(text: "Text sis", isDone: false, highPriority: false, dueBy: Calendar.current.date(byAdding: .day, value: -1, to: Calendar.current.date(bySettingHour: 16, minute: 20, second: 0, of: Date())!)!, doneOn: nil),
+        TempTodo(text: "Text father", isDone: false, highPriority: true, dueBy: Calendar.current.date(byAdding: .day, value: -1, to: Calendar.current.date(bySettingHour: 16, minute: 20, second: 0, of: Date())!)!, doneOn: nil),
+        // Done
+        // Today
+        TempTodo(text: "Visit the University campus", isDone: true, highPriority: false, dueBy: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!, doneOn: Calendar.current.date(bySettingHour: 15, minute: 00, second: 0, of: Date())!),
+        TempTodo(text: "Leave campus", isDone: true, highPriority: false, dueBy: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!, doneOn: Calendar.current.date(bySettingHour: 18, minute: 00, second: 0, of: Date())!),
+        // Past
+        TempTodo(text: "Buy fruits", isDone: true, highPriority: true, dueBy: Calendar.current.date(byAdding: .day, value: -3, to: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!)!, doneOn: Calendar.current.date(byAdding: .day, value: -2, to: Calendar.current.date(bySettingHour: 18, minute: 00, second: 0, of: Date())!)!),
+        TempTodo(text: "Buy clothes", isDone: true, highPriority: true, dueBy: Calendar.current.date(byAdding: .day, value: -5, to: Calendar.current.date(bySettingHour: 23, minute: 59, second: 0, of: Date())!)!, doneOn: Calendar.current.date(byAdding: .day, value: -1, to: Calendar.current.date(bySettingHour: 13, minute: 15, second: 0, of: Date())!)!),
+    ]
+    
+    private func saveDummyEntries(){
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: "FirstLaunch") != true{
+            defaults.set(true, forKey: "FirstLaunch")
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            DUMMY_TODOS.forEach { temp in
+                let newItem = Todo(context: context)
+                newItem.text = temp.text
+                newItem.dueBy = temp.dueBy
+                newItem.highPriority = temp.highPriority
+                newItem.isDone = temp.isDone
+                newItem.doneOn = temp.doneOn
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        }
+    }
 
 }
 

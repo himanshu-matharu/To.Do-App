@@ -12,6 +12,7 @@ class TodoDoneCell: UITableViewCell {
     //MARK: - Variables and Properties
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var todoText: UILabel!
+    @IBOutlet weak var toggleView: UIView!
     
     //MARK: - Class Methods
     override func awakeFromNib() {

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoReusableCell" rowHeight="119" id="KGk-i7-Jjw" customClass="TodoCell" customModule="To_Do" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TodoReusableCell" rowHeight="119" id="KGk-i7-Jjw" customClass="TodoCell" customModule="To_Do" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="415" height="119"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -25,7 +25,7 @@
                                 <rect key="frame" x="10" y="10" width="395" height="84"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-lp-coO">
-                                        <rect key="frame" x="0.0" y="0.0" width="346" height="84"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="385" height="84"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check" translatesAutoresizingMaskIntoConstraints="NO" id="M3O-sq-kpo">
                                                 <rect key="frame" x="0.0" y="22" width="40" height="40"/>
@@ -35,10 +35,10 @@
                                                 </constraints>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOF-dX-osa">
-                                                <rect key="frame" x="55" y="16" width="291" height="52"/>
+                                                <rect key="frame" x="55" y="16" width="330" height="52"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="j56-fY-5hh">
-                                                        <rect key="frame" x="0.0" y="6.5" width="291" height="39"/>
+                                                        <rect key="frame" x="0.0" y="6.5" width="330" height="39"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet Ann" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QB2-5T-hnw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="19.5"/>
@@ -65,20 +65,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-BK-lFM">
-                                        <rect key="frame" x="346" y="0.0" width="49" height="84"/>
+                                        <rect key="frame" x="385" y="0.0" width="10" height="84"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ASC-pp-ecB">
-                                                <rect key="frame" x="0.0" y="35.5" width="14" height="13"/>
-                                                <color key="tintColor" name="PrimaryGreenColor"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cO1-3t-bqj">
+                                                <rect key="frame" x="0.0" y="37" width="10" height="10"/>
+                                                <color key="backgroundColor" name="PrimaryGreenColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ASC-pp-ecB" secondAttribute="height" multiplier="1:1" id="2Pj-WX-NTw"/>
-                                                    <constraint firstAttribute="height" constant="14" id="8OW-iI-3sS"/>
+                                                    <constraint firstAttribute="width" secondItem="cO1-3t-bqj" secondAttribute="height" multiplier="1:1" id="4Ml-Un-BFT"/>
+                                                    <constraint firstAttribute="height" constant="10" id="5G1-wg-tKv"/>
                                                 </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qXw-qR-WVI">
-                                                <rect key="frame" x="29" y="32.5" width="20" height="19.5"/>
-                                                <color key="tintColor" name="PrimaryGrayColor"/>
-                                            </imageView>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -109,18 +105,16 @@
             <color key="backgroundColor" name="BackgroundColor"/>
             <connections>
                 <outlet property="container" destination="NGe-4H-Xel" id="GKE-1N-R0c"/>
-                <outlet property="priorityIndicator" destination="ASC-pp-ecB" id="c4K-gv-4oC"/>
-                <outlet property="reminderIndicator" destination="qXw-qR-WVI" id="0JM-iM-nGr"/>
-                <outlet property="reminderText" destination="qFu-s4-5E4" id="x13-32-8fi"/>
+                <outlet property="dueByText" destination="qFu-s4-5E4" id="x13-32-8fi"/>
+                <outlet property="priorityIndicator" destination="cO1-3t-bqj" id="wRP-BB-ueW"/>
                 <outlet property="todoText" destination="QB2-5T-hnw" id="HlD-fm-uVO"/>
+                <outlet property="toggleView" destination="M3O-sq-kpo" id="VCc-Xd-hep"/>
             </connections>
             <point key="canvasLocation" x="71.739130434782609" y="137.61160714285714"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Check" width="42" height="42"/>
-        <image name="bell.fill" catalog="system" width="128" height="124"/>
-        <image name="circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="BackgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

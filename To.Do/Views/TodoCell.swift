@@ -12,9 +12,9 @@ class TodoCell: UITableViewCell {
     //MARK: - Variables and Properties
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var todoText: UILabel!
-    @IBOutlet weak var reminderText: UILabel!
-    @IBOutlet weak var priorityIndicator: UIImageView!
-    @IBOutlet weak var reminderIndicator: UIImageView!
+    @IBOutlet weak var dueByText: UILabel!
+    @IBOutlet weak var priorityIndicator: UIView!
+    @IBOutlet weak var toggleView: UIImageView!
     
     //MARK: - Class methods
     override func awakeFromNib() {
@@ -22,12 +22,17 @@ class TodoCell: UITableViewCell {
         
         // Initialization code
         setupContainerShadow()
+        setupPriorityIndicator()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func setupPriorityIndicator(){
+        priorityIndicator.layer.cornerRadius = priorityIndicator.frame.height / 2
     }
     
     private func setupContainerShadow(){
