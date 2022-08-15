@@ -292,11 +292,53 @@
                                     <constraint firstAttribute="bottom" secondItem="yFW-pD-CJJ" secondAttribute="bottom" id="pph-DP-ZC7"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dK-Ql-ZDs">
+                                <rect key="frame" x="20" y="221.5" width="250.5" height="585.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qNr-l1-JWD">
+                                        <rect key="frame" x="5.5" y="109.5" width="240" height="366.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty" translatesAutoresizingMaskIntoConstraints="NO" id="asr-yJ-9ce">
+                                                <rect key="frame" x="6.5" y="0.0" width="227" height="227"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no tasks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJd-PV-LLa">
+                                                <rect key="frame" x="48" y="227" width="144.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="textColor" name="PrimaryBlackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write something below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-bI-frA">
+                                                <rect key="frame" x="41.5" y="248.5" width="157" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" name="PrimaryBlackColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czu-m1-zih">
+                                                <rect key="frame" x="0.0" y="266.5" width="240" height="100"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="oFr-W7-emh"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="czu-m1-zih" firstAttribute="centerX" secondItem="qNr-l1-JWD" secondAttribute="centerX" id="rG3-aN-pYP"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="qNr-l1-JWD" firstAttribute="centerY" secondItem="1dK-Ql-ZDs" secondAttribute="centerY" id="qt1-wS-oVr"/>
+                                    <constraint firstItem="qNr-l1-JWD" firstAttribute="centerX" secondItem="1dK-Ql-ZDs" secondAttribute="centerX" id="yHd-Gk-kV0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KtJ-Aa-855" firstAttribute="top" secondItem="4KN-yu-gyx" secondAttribute="bottom" constant="16" id="1np-La-VAG"/>
+                            <constraint firstItem="gCE-CW-bVo" firstAttribute="top" secondItem="1dK-Ql-ZDs" secondAttribute="bottom" id="9XJ-v0-vEF"/>
+                            <constraint firstItem="1dK-Ql-ZDs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M1g-X1-PrD"/>
                             <constraint firstAttribute="trailing" secondItem="E3C-jP-bmQ" secondAttribute="trailing" id="Mev-O5-PsZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gCE-CW-bVo" secondAttribute="bottom" constant="15" id="Qyh-cZ-q4t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KtJ-Aa-855" secondAttribute="trailing" id="UG0-MC-Na4"/>
@@ -304,12 +346,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4KN-yu-gyx" secondAttribute="trailing" id="ch5-Af-ws3"/>
                             <constraint firstItem="gCE-CW-bVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ciS-d5-q4g"/>
                             <constraint firstItem="KtJ-Aa-855" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ctM-c5-wGr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1dK-Ql-ZDs" secondAttribute="trailing" id="elY-Wt-1qm"/>
                             <constraint firstItem="E3C-jP-bmQ" firstAttribute="top" secondItem="KtJ-Aa-855" secondAttribute="bottom" id="ffJ-ET-MX2"/>
                             <constraint firstItem="4KN-yu-gyx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iqX-lR-y3h"/>
                             <constraint firstItem="E3C-jP-bmQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j7A-vM-IfV"/>
                             <constraint firstItem="nSF-HM-Uvp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lGp-CS-3iS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gCE-CW-bVo" secondAttribute="trailing" constant="20" id="m9f-Me-9wB"/>
                             <constraint firstItem="4KN-yu-gyx" firstAttribute="top" secondItem="nSF-HM-Uvp" secondAttribute="bottom" constant="24" id="rz2-bd-oev"/>
+                            <constraint firstItem="1dK-Ql-ZDs" firstAttribute="top" secondItem="KtJ-Aa-855" secondAttribute="bottom" id="soW-iC-8jj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nSF-HM-Uvp" secondAttribute="trailing" constant="20" id="t0g-Rv-RRR"/>
                             <constraint firstItem="nSF-HM-Uvp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="uPe-AW-dBg"/>
                         </constraints>
@@ -317,6 +361,7 @@
                     <navigationItem key="navigationItem" id="QYH-sz-oVr"/>
                     <connections>
                         <outlet property="divider" destination="KtJ-Aa-855" id="7lL-YU-3vk"/>
+                        <outlet property="emptyTableContainer" destination="1dK-Ql-ZDs" id="tAN-4C-dNC"/>
                         <outlet property="headerDateLabel" destination="L8Y-Cs-ztP" id="6c8-rT-vqp"/>
                         <outlet property="newTodoTrigger" destination="gCE-CW-bVo" id="yV3-1F-S5W"/>
                         <outlet property="tableView" destination="I9n-cy-EUX" id="jZU-ec-Hmv"/>
@@ -446,6 +491,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Empty" width="227" height="227"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>

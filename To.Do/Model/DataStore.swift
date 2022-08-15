@@ -228,6 +228,10 @@ class DataStore {
         }
     }
     
+    func getTotalDataCount() -> Int{
+        return self.todoCurrentPriority.count + self.todoCurrentNormal.count + self.todoPastPriority.count + self.todoPastNormal.count + self.done.count
+    }
+    
     func refreshTableDataSource(){
         self.tableDataSource = createTableDataSource()
     }

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var divider: UIView!
     @IBOutlet weak var newTodoTrigger: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyTableContainer: UIView!
     
     private var dataStore = DataStore()
     
@@ -89,6 +90,8 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: K.todoCellNibName, bundle: nil), forCellReuseIdentifier: K.todoCellIdentifier)
         tableView.register(UINib(nibName: K.todoDoneCellNibName, bundle: nil), forCellReuseIdentifier: K.todoDoneCellIdentifier)
         tableView.sectionHeaderTopPadding = 0
+        
+        checkEmptyTableView()
     }
     
     @objc private func goToNewTodo(){
@@ -116,6 +119,17 @@ class HomeViewController: UIViewController {
                     break
                 }
             }
+        }
+    }
+    
+    private func checkEmptyTableView(){
+        let count = dataStore.getTotalDataCount()
+        if count == 0{
+            self.tableView.isHidden = true
+            self.emptyTableContainer.isHidden = false
+        }else{
+            self.tableView.isHidden = false
+            self.emptyTableContainer.isHidden = true
         }
     }
 
@@ -146,8 +160,10 @@ extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let tableDataSource = dataStore.tableDataSource else {return 0}
         switch tableDataSource[section] {
-        case .todo(let items): return items.count
-        case .done(let items): return items.count
+        case .todo(let items):
+            return items.count
+        case .done(let items):
+            return items.count
         }
     }
     
@@ -257,6 +273,7 @@ extension HomeViewController: UITableViewDelegate{
             }
             self.dataStore.refreshTableDataSource()
             tableView.deleteRows(at: [indexPath], with: .fade)
+            self.checkEmptyTableView()
         }
         trash.backgroundColor = UIColor(named: "BackgroundColor")
         trash.image = UIImage(named: "Trash")
@@ -282,5 +299,6 @@ extension HomeViewController: UITableViewDelegate{
 extension HomeViewController: DataStoreDelegate{
     func didUpdateTableViewDataSource() {
         self.tableView.reloadData()
+        self.checkEmptyTableView()
     }
 }
