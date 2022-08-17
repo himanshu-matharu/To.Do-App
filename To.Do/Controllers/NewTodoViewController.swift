@@ -80,6 +80,10 @@ class NewTodoViewController: UIViewController{
         todoTextField.layer.shadowRadius = 4
         todoTextField.layer.shadowColor = UIColor(named: "PrimaryGrayColor")?.cgColor
         todoTextField.layer.cornerRadius = 5
+        todoTextField.attributedPlaceholder = NSAttributedString(
+            string: "What do you need to do?",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "PrimaryGrayColor")!]
+        )
         
         todoTextField.delegate = self
         

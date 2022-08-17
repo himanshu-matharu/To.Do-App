@@ -31,7 +31,7 @@
                                         </view>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="I9n-cy-EUX" secondAttribute="trailing" constant="20" id="1Jv-j1-0GS"/>
                                     <constraint firstItem="I9n-cy-EUX" firstAttribute="leading" secondItem="E3C-jP-bmQ" secondAttribute="leading" constant="20" id="c3r-lT-T0a"/>
@@ -326,7 +326,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="qNr-l1-JWD" firstAttribute="centerY" secondItem="1dK-Ql-ZDs" secondAttribute="centerY" id="qt1-wS-oVr"/>
                                     <constraint firstItem="qNr-l1-JWD" firstAttribute="centerX" secondItem="1dK-Ql-ZDs" secondAttribute="centerX" id="yHd-Gk-kV0"/>
@@ -398,6 +398,7 @@
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What do you need to do?" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="YGR-F3-RC1">
                                 <rect key="frame" x="20" y="146" width="374" height="34"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -458,7 +459,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IH1-QM-hja"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bcf-Io-nHJ" firstAttribute="leading" secondItem="IH1-QM-hja" secondAttribute="leading" constant="20" id="18N-Ly-hve"/>
                             <constraint firstItem="YGR-F3-RC1" firstAttribute="leading" secondItem="IH1-QM-hja" secondAttribute="leading" constant="20" id="5uH-Wn-HfF"/>

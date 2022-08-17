@@ -19,6 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         saveDummyEntries()
+        
+        if #available(iOS 13.0, *) {
+            if UITraitCollection.current.userInterfaceStyle == .dark {
+                window?.overrideUserInterfaceStyle = .light
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

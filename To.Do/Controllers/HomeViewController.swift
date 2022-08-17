@@ -90,6 +90,7 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: K.todoCellNibName, bundle: nil), forCellReuseIdentifier: K.todoCellIdentifier)
         tableView.register(UINib(nibName: K.todoDoneCellNibName, bundle: nil), forCellReuseIdentifier: K.todoDoneCellIdentifier)
         tableView.sectionHeaderTopPadding = 0
+        tableView.tableFooterView?.backgroundColor = .clear
         
         checkEmptyTableView()
     }
