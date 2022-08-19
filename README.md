@@ -4,7 +4,7 @@
 <a href="https://github.com/himanshu-matharu/Minimalist-Weather-App/releases">
 <img src='https://img.shields.io/badge/version-1.0.0-blue'>
 </a>
-<a href="https://github.com/himanshu-matharu/Minimalist-Weather-App/blob/main/LICENSE">
+<a href="https://github.com/himanshu-matharu/To.Do-App/blob/main/LICENSE">
 <img src="https://img.shields.io/badge/License-GPLv3-blue.svg"/>
 </a>
 </div>
@@ -39,7 +39,7 @@ git clone https://github.com/himanshu-matharu/To.Do-App.git
 3. Build and Run.
 
 # License
-The Minimal Weather app is free and open-source software licensed under the GNU General Public License v3.0. See the <a href="https://github.com/himanshu-matharu/Minimalist-Weather-App/blob/main/LICENSE">LICENSE</a> file for more details.
+The To.Do app is free and open-source software licensed under the GNU General Public License v3.0. See the <a href="https://github.com/himanshu-matharu/To.Do-App/blob/main/LICENSE">LICENSE</a> file for more details.
 
 # Contact
 For any queries, send me a mail on himanshumatharu1155@gmail.com
