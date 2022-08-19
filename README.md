@@ -1,7 +1,7 @@
 <p align="center"><img src="thumbnail.png" width="480" alt="thumbnail"></p>
 
 <div align="center">
-<a href="https://github.com/himanshu-matharu/Minimalist-Weather-App/releases">
+<a href="https://github.com/himanshu-matharu/To.Do-App/releases">
 <img src='https://img.shields.io/badge/version-1.0.0-blue'>
 </a>
 <a href="https://github.com/himanshu-matharu/To.Do-App/blob/main/LICENSE">
