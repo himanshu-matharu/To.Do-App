@@ -13,8 +13,12 @@
 The app is under review on Apple AppStore Connect and will be available soon.
 
 # Description
-A minimalistic weather app free from all the clutter and provides only the essential information.
-Powered by OpenWeather, Minimal Weather uses location information to display the temperature in Celsius and the weather conditions.
+No unnecessary analysis or grouping. Just a simple todo list.
+
+- Create todo items
+- Set important items as high priority
+- Todo items are sorted by due date and priority
+- Tap the check icon to toggle done status
 
 UI of the app is based on design by <a href="https://www.behance.net/gallery/72614427/To-Do-App-Concept?tracking_source=search_projects%7Cminimal%20todo%20app">Rita Deyneko</a>.
 
